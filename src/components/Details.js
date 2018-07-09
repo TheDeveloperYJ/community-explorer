@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import Carousel from '../components/DetailsPage/Carousel'
+import ImgCarousel from '../components/DetailsPage/ImgCarousel'
 import Description from '../components/DetailsPage/Description'
 import Location from '../components/DetailsPage/Location'
 import Title from '../components/DetailsPage/Title'
@@ -35,7 +35,7 @@ export default class Details extends Component{
               <NavBar/>
               <Overdrive id={result.ownerId}>
               <Grid>
-           <Carousel image={result.imageUrl}/>
+           <ImgCarousel image={result.imageUrl}/>
            <Title title={result.title} profile={result.ownerProfileImageUrl} time={result.activityTime.activityDateString} name={result.ownerName}/>
            <Description desc={result.description}/>
            <Location location={result.location} lat={result.location.lat} lng={result.location.lon}/>
